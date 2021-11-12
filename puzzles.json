@@ -1,0 +1,191 @@
+{
+  "Tag 01":
+  {
+    "board": [["--", "--", "--", "--", "--", "--", "sK", "--"],
+              ["--", "--", "--", "wD", "--", "--", "--", "--"],
+              ["--", "--", "--", "--", "--", "--", "--", "--"],
+              ["--", "--", "--", "--", "wL", "--", "--", "--"],
+              ["--", "--", "--", "--", "--", "--", "--", "--"],
+              ["--", "--", "wK", "--", "--", "--", "--", "--"],
+              ["--", "--", "--", "--", "--", "--", "--", "--"],
+              ["--", "--", "--", "--", "--", "--", "--", "--"]],
+    "description": "Matt in 1 Zug.\nWeiß am Zug.",
+    "solution": "Dg7",
+    "solved": 0
+  },
+  "Tag 02":
+  {
+    "board": [["--", "--", "--", "--", "--", "--", "sK", "--"],
+              ["--", "--", "sB", "--", "--", "sB", "--", "sB"],
+              ["--", "sB", "--", "--", "--", "--", "sB", "--"],
+              ["sB", "--", "sS", "--", "wL", "--", "--", "--"],
+              ["--", "--", "--", "--", "--", "--", "--", "wB"],
+              ["--", "--", "wL", "--", "--", "--", "wB", "--"],
+              ["wB", "wB", "wB", "--", "--", "sT", "--", "--"],
+              ["--", "wK", "--", "wT", "--", "--", "--", "--"]],
+    "description": "Matt in 1 Zug.\nWeiß am Zug.",
+    "solution": "Td8",
+    "solved": 0
+  },
+  "Tag 03":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 04":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 05":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 06":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 07":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 08":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 09":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 10":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 11":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 12":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 3":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 13":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 14":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 15":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 16":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 17":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 18":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 19":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 20":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 21":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 22":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 23":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  },
+  "Tag 24":
+  {
+    "board": [],
+    "description": "",
+    "solution": "",
+    "solved": 0
+  }
+}
