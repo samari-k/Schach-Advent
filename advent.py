@@ -3,6 +3,11 @@ import json
 from datetime import date
 
 
+"""
+Matt in einem Zug, Aufgaben von https://www.schach-tipps.de/schachtraining/taktik/matt-in-1-zug
+"""
+
+
 class AdventCalendar:
 
     def __init__(self, master):
@@ -25,17 +30,13 @@ class AdventCalendar:
         self.puzzles_scroll_menu = self.master.add_scroll_menu('Türchen', 0, 0, column_span=1, row_span=6)
         self.puzzles_scroll_menu.add_key_command(py_cui.keys.KEY_ENTER, self.select_puzzle)
         self.puzzles_scroll_menu.set_focus_border_color(self.focus_border_color)
-
         with open("puzzles.json", "r") as puzzles_file:
             self.puzzles = json.load(puzzles_file)
-        for puzzle in self.puzzles:
-            self.puzzles_scroll_menu.add_item(puzzle)
-
-        self.puzzles_scroll_menu.add_text_color_rule(self.current_date, py_cui.CYAN_ON_BLACK, 'endswith')
+        self.puzzles_scroll_menu.add_text_color_rule(self.current_date, py_cui.CYAN_ON_BLACK, 'contains')
         for c in self.closed:
-            self.puzzles_scroll_menu.add_text_color_rule(c, py_cui.YELLOW_ON_BLACK, 'endswith')
+            self.puzzles_scroll_menu.add_text_color_rule(c, py_cui.YELLOW_ON_BLACK, 'contains')
         for o in self.opened:
-            self.puzzles_scroll_menu.add_text_color_rule(o, py_cui.GREEN_ON_BLACK, 'endswith')
+            self.puzzles_scroll_menu.add_text_color_rule(o, py_cui.GREEN_ON_BLACK, 'contains')
 
         self.puzzle_text_block = self.master.add_text_block('Advent, Advent!', 0, 1, column_span=3, row_span=5)
         self.puzzle_text_block.set_selectable(False)
@@ -49,8 +50,9 @@ class AdventCalendar:
         self.manual_button = self.master.add_button('Anleitung', 0, 4, command=self.show_manual)
         self.reset_button = self.master.add_button('reset', 1, 4, command=self.show_reset_popup)
         self.hint_button = self.master.add_button('Hinweis', 5, 4, command=self.show_hint)
-        self.disable_hint()
 
+        self.load_scroll_menu()
+        self.disable_hint()
         self.show_manual()
 
     def save(self):
@@ -72,6 +74,11 @@ class AdventCalendar:
                 board_string += "   +-------------------------------+\n\n"
             i -= 1
         return board_string
+
+    def load_scroll_menu(self):
+        self.puzzles_scroll_menu.clear()
+        for puzzle in self.puzzles:
+            self.puzzles_scroll_menu.add_item(puzzle)
 
     def select_puzzle(self):
         puzzle_name = self.puzzles_scroll_menu.get()
@@ -108,7 +115,7 @@ class AdventCalendar:
             puzzle_name = self.puzzles_scroll_menu.get()
             puzzle = self.puzzles.get(puzzle_name)
             puzzle["solved"] = 1
-            self.save()
+            self.rename_puzzle(puzzle_name)
             self.master.move_focus(self.puzzles_scroll_menu)
             self.disable_hint()
         else:
@@ -116,14 +123,29 @@ class AdventCalendar:
                                            color=py_cui.WHITE_ON_RED)
             self.master.move_focus(self.answer_text_box)
 
+    def rename_puzzle(self, puzzle_name):
+        puzzle = self.puzzles.get(puzzle_name)
+        if puzzle_name[-1] == "*":
+            new_name = puzzle_name[:-1]
+        else:
+            new_name = puzzle_name+"*"
+        new_puzzles_dict = {new_name if k == puzzle_name else k: v for k, v in self.puzzles.items()}
+        self.puzzles = new_puzzles_dict
+        self.save()
+        self.load_scroll_menu()
+
     def show_reset_popup(self):
         self.master.show_yes_no_popup("Spielstand zurücksetzen?", command=self.reset)
 
-    def reset(self, value):
-        for puzzle_name in self.puzzles:
-            puzzle = self.puzzles.get(puzzle_name)
-            puzzle['solved'] = 0
-        self.save()
+    def reset(self, reset_value):
+        if reset_value:
+            for puzzle_name in self.puzzles:
+                puzzle = self.puzzles.get(puzzle_name)
+                if puzzle['solved'] == 1:
+                    puzzle['solved'] = 0
+                    self.rename_puzzle(puzzle_name)
+            self.answer_text_box.clear()
+        self.select_puzzle()
 
     def show_hint(self):
         self.answer_text_box.set_text(self.solution[0])
