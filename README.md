@@ -15,6 +15,9 @@ Die Navigation erfolgt mit der Tastatur. Mit den Pfeiltasten lässt sich zwische
 hin und her switchen. Zum Auswählen eines Rätsels, Buttons oder des Antwort-Feldes wird Enter gedrückt.
 Um die Auswahl des Rätsel- oder Antwort-Feldes aufzuheben wird Escape gedrückt.
 
+Sollte (zum Beispiel bei der Anleitung oder den Schachbrettern) nicht der komplette Text zu sehen sein, muss das 
+Terminal-Fenster vergrößert werden.
+
 ## Hinweise
 
 Alle Rätsel stammen von [www.schach-tipps.de](https://www.schach-tipps.de/schachtraining/taktik/matt-in-1-zug). <br>
