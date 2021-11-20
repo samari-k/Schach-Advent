@@ -1,9 +1,8 @@
-# Advent, Advent!
-<hr>
-wer, wie, was, wieso, weshalb, warum?
+# Schach-Adventskalender
+
+![Spielvorschau](vorschau.gif)
 
 ## Installation
-<hr>
 
-## Spielanleitung
-<hr>
+
+## Benutzung
