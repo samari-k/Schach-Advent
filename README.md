@@ -7,7 +7,7 @@
 Dateien runterladen, z.B. mit `git clone https://github.com/samari-k/Schach-Advent.git` oder als ZIP-Archiv.
 Im (nötigenfalls entpackten) Ordner das benötigte Package [py_cui](https://github.com/jwlodek/py_cui) installieren, 
 entweder mit `pip install -r requirements.txt` oder mit `pip install py-cui`.<br>
-Starten lässt das Spiel dann im entsprechenden Ordner mit `python advent.py` bzw `python3 advent.py`.
+Starten lässt sich das Spiel dann im entsprechenden Ordner mit `python advent.py` bzw `python3 advent.py`.
 
 ## Benutzung
 
