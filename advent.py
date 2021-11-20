@@ -105,6 +105,7 @@ class AdventCalendar:
             puzzle = self.puzzles.get(puzzle_name)
             flip = True if puzzle["turn"] == "schwarz" else False
             self.puzzle_text_block.set_text(self.board_to_string(puzzle.get("board"), flip) +
+                                            "\n Matt in einem Zug." +
                                             "\n " + puzzle.get("turn").capitalize() + " am Zug.")
             self.puzzle_text_block.set_title(puzzle_name)
             self.solution = puzzle.get("solution")
