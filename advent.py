@@ -16,7 +16,7 @@ class AdventCalendar:
 
         self.focus_border_color = py_cui.CYAN_ON_BLACK
 
-        self.current_date = date.today().strftime("%d") if date.today() >= date(2021, 11, 1) else "00"
+        self.current_date = date.today().strftime("%d") if date.today() >= date(2021, 12, 1) else "00"
         self.closed = ['0'+str(i) for i in range(1, 10) if i > int(self.current_date)] + \
                       [str(i) for i in range(10, 25) if i > int(self.current_date)]
         self.opened = ['0'+str(i) for i in range(1, 10) if '0'+str(i) not in self.closed] + \
