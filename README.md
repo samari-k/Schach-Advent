@@ -18,6 +18,8 @@ Um die Auswahl des Rätsel- oder Antwort-Feldes aufzuheben wird Escape gedrückt
 Sollte (zum Beispiel bei der Anleitung oder den Schachbrettern) nicht der komplette Text zu sehen sein, muss das 
 Terminal-Fenster vergrößert werden.
 
+Beenden lässt sich das Programm mit der Taste `q` (Wenn kein Widget aktiv ist).
+
 ## Hinweise
 
 Alle Rätsel stammen von [www.schach-tipps.de](https://www.schach-tipps.de/schachtraining/taktik/matt-in-1-zug). <br>
